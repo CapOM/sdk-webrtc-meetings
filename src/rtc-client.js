@@ -279,6 +279,10 @@ module.exports = function (RTCManager) {
     RTCManager.setBandwidth(bw);
   };
 
+  var updateDevices = function(devices) {
+    localDevices = devices;
+  };
+
 
         /* ========================= */
         /*      Mute Controls   	 */
@@ -396,6 +400,7 @@ module.exports = function (RTCManager) {
     changeAudioOutput: changeAudioOutput,
     changeVideoInput : changeVideoInput,
     setVideoBandwidth: setVideoBandwidth,
+    updateDevices: updateDevices,
     joinMeeting : joinMeeting,
     leaveMeeting : leaveMeeting,
     version : reportSdkVersion,
